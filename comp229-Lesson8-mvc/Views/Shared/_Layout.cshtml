@@ -21,11 +21,19 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="@Url.Action("Index", "Home")"<i class="fa fa-home fa-lg"></i>Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")"><i class="fa fa-info fa-lg"></i> About</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")"><i class="fa fa-phone fa-lg"></i> Contact</a></li> 
                 </ul>
-                @Html.Partial("_LoginPartial")
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Action("Index", "Albums")"><i class="fa fa-circle-o fa-lg"></i> Albums</a></li>
+                    <li><a href="@Url.Action("Index", "Genres")"><i class="fa fa-music fa-lg"></i> Genres</a></li>
+                    <li><a href="@Url.Action("Index", "Artists")"><i class="fa fa-users fa-lg"></i> Artists</a></li>
+                    @Html.Partial("_LoginPartial")
+                </ul>
+
+            
             </div>
         </div>
     </div>

@@ -10,6 +10,7 @@ namespace comp229_Lesson8_mvc.Controllers
     {
         public ActionResult Index()
         {
+           
             return View();
         }
 
